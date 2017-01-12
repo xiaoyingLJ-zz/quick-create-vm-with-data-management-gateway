@@ -39,20 +39,6 @@
     "Password": {
       "type": "securestring"
     },
-    "windowsOSVersion": {
-      "type": "string",
-      "defaultValue": "2016-Datacenter",
-      "allowedValues": [
-        "2008-R2-SP1",
-        "2012-Datacenter",
-        "2012-R2-Datacenter",
-        "2016-Datacenter-with-Containers",
-        "2016-Datacenter"
-      ],
-      "metadata": {
-        "description": "The Windows version for the VM. This will pick a fully patched image of this given Windows version."
-      }
-    },
     "dnsLabelPrefix": {
       "type": "string",
       "metadata": {
@@ -195,7 +181,7 @@
         "storageProfile": {
           "imageReference": {
             "publisher": "MicrosoftWindowsServer",            "offer": "WindowsServer",
-            "sku": "[parameters('windowsOSVersion')]",
+            "sku": "2016-Datacenter",
             "version": "latest"
           },
           "osDisk": {
