@@ -82,7 +82,7 @@
     "publicIPAddressName": "[concat(parameters('Name'), '-ip')]",
     "subnetRef": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]",
     "networkSecurityGroupName": "[concat(parameters('Name'), 'nsg')]",
-    "scriptURL": "[concat(variables('baseUri'), '/scripts', 'gatewayInstall.ps1')]"
+    "scriptURL": "[concat(variables('baseUri'), '/scripts/gatewayInstall.ps1')]"
   },
   "resources": [
     {
